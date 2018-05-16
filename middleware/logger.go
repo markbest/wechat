@@ -3,20 +3,16 @@ package middleware
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/markbest/wechat/utils"
 	"io/ioutil"
 	"os"
 	"time"
-	"fmt"
 )
 
 type logDebug struct {
-	CreatedAt string `json:"create_at"`
-	request
-}
-
-type request struct {
+	CreatedAt   string   `json:"create_at"`
 	Url         string   `json:"url"`
 	Method      string   `json:"method"`
 	ContentType []string `json:"content_type"`
