@@ -1,0 +1,67 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "rcoUTEGR7KVr963l6P1rlMaYCzA=",
+			"path": "github.com/BurntSushi/toml",
+			"revision": "a368813c5e648fee92e5f6c30e3944ff9d5e8895",
+			"revisionTime": "2017-06-26T11:06:00Z"
+		},
+		{
+			"checksumSHA1": "BhMowD2DIKSd9qq8Pzh7Y3mh2/w=",
+			"path": "github.com/gin-contrib/sse",
+			"revision": "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae",
+			"revisionTime": "2017-01-09T09:34:21Z"
+		},
+		{
+			"checksumSHA1": "8nCMZVKmvgqfvytlvgGKyGACFjc=",
+			"path": "github.com/gin-gonic/gin",
+			"revision": "22fc0284e3ae2101f44e8188dde8cad797ce51e6",
+			"revisionTime": "2017-07-05T02:42:56Z"
+		},
+		{
+			"checksumSHA1": "m+RzErbyZxy2rAAxhKvO5NaSvBE=",
+			"path": "github.com/gin-gonic/gin/binding",
+			"revision": "22fc0284e3ae2101f44e8188dde8cad797ce51e6",
+			"revisionTime": "2017-07-05T02:42:56Z"
+		},
+		{
+			"checksumSHA1": "guIVY1IRmjYd5O3DOAcfjTVpeWo=",
+			"path": "github.com/gin-gonic/gin/render",
+			"revision": "22fc0284e3ae2101f44e8188dde8cad797ce51e6",
+			"revisionTime": "2017-07-05T02:42:56Z"
+		},
+		{
+			"checksumSHA1": "EM7i42KNYmX5FSTuPOYUa5u7344=",
+			"path": "github.com/golang/protobuf/proto",
+			"revision": "bbd03ef6da3a115852eaf24c8a1c46aeb39aa175",
+			"revisionTime": "2018-02-02T18:43:18Z"
+		},
+		{
+			"checksumSHA1": "DxQksGu9c8Z3zQCOXkzomkddkOc=",
+			"path": "github.com/mattn/go-isatty",
+			"revision": "6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c",
+			"revisionTime": "2017-11-07T05:05:31Z"
+		},
+		{
+			"checksumSHA1": "kZScNEQ20idmssR5L8ynNj0Gsts=",
+			"path": "github.com/ugorji/go/codec",
+			"revision": "5efa3251c7f7d05e5d9704a69a984ec9f1386a40",
+			"revisionTime": "2017-06-20T10:48:52Z"
+		},
+		{
+			"checksumSHA1": "QSy5NJwFICKehDsWtfHbcVjIZ+o=",
+			"path": "gopkg.in/go-playground/validator.v8",
+			"revision": "5f57d2222ad794d0dffb07e664ea05e2ee07d60c",
+			"revisionTime": "2016-07-18T13:41:25Z"
+		},
+		{
+			"checksumSHA1": "RuTPQyxM5u1jLAx9l9Y/rsLMOEY=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "5420a8b6744d3b0345ab293f6fcba19c978f1183",
+			"revisionTime": "2018-03-28T19:50:20Z"
+		}
+	],
+	"rootPath": "wechat"
+}
