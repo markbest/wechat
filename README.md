@@ -2,7 +2,7 @@
 Golang开发微信公众号
 
 ## 安装使用
-- 进入conf文件夹，复制app.conf.example为app.conf，并完成配置
+- 进入conf文件夹，复制conf.toml.example为conf.toml，并完成配置
 ```
 [app]
 port = "端口号"
