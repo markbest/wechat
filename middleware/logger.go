@@ -8,18 +8,22 @@ import (
 	"io/ioutil"
 	"os"
 	"time"
+	"fmt"
 )
 
 type logDebug struct {
-	CreatedAt string
-	Request   request
+	CreatedAt string `json:"create_at"`
+	request
 }
 
 type request struct {
-	Url         string
-	Method      string
-	ContentType []string
-	Body        string
+	Url         string   `json:"url"`
+	Method      string   `json:"method"`
+	ContentType []string `json:"content_type"`
+	Body        string   `json:"body"`
+	ClientIp    string   `json:"client_ip"`
+	Status      int      `json:"status"`
+	Latency     string   `json:"latency"`
 }
 
 func Logger() gin.HandlerFunc {
@@ -33,24 +37,36 @@ func Logger() gin.HandlerFunc {
 		logData.CreatedAt = t.Format("2006-01-02 15:04:05")
 
 		// request url
-		logData.Request.Url = c.Request.URL.RequestURI()
+		logData.Url = c.Request.URL.RequestURI()
 
 		// request method
-		logData.Request.Method = c.Request.Method
+		logData.Method = c.Request.Method
 
 		// request content type
-		logData.Request.ContentType = c.Request.Header["Content-Type"]
+		logData.ContentType = c.Request.Header["Content-Type"]
 
 		// request body
 		body, _ := ioutil.ReadAll(c.Request.Body)
-		logData.Request.Body = string(body)
+		logData.Body = string(body)
 		c.Request.Body = ioutil.NopCloser(bytes.NewBuffer(body))
+
+		// request client ip
+		logData.ClientIp = c.ClientIP()
+
+		start := time.Now()
+		c.Next()
+		end := time.Now()
+		latency := end.Sub(start)
+
+		// request latency
+		logData.Latency = fmt.Sprintf("%v", latency)
+
+		// request status
+		logData.Status = c.Writer.Status()
 
 		// write log
 		data, _ := json.Marshal(logData)
 		data = utils.ReplaceEscapeStr(data)
 		file.WriteString(string(data) + "\n")
-
-		c.Next()
 	}
 }

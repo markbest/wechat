@@ -16,7 +16,7 @@ func main() {
 	gin.SetMode(gin.ReleaseMode)
 
 	// start server
-	r := gin.Default()
+	r := gin.New()
 
 	// add middleware
 	r.Use(middleware.Logger())
