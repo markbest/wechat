@@ -1,7 +1,7 @@
 ## wechat
 Golang开发微信公众号
 
-## 安装使用
+## usage
 - 进入conf文件夹，复制conf.toml.example为conf.toml，并完成配置
 ```
 [app]
@@ -14,7 +14,7 @@ go build -o bin/wechat wechat.go
 ```
 - 启动服务bin/wechat
 
-## 功能介绍
+## feature
 - 你问我答  
 粉丝给公众号一条文本消息，公众号立马回复相同文本消息给粉丝
 - “图”尚往来  
